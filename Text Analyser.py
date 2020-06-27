@@ -30,3 +30,34 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish, 
 garpike and stingray are also present.'''
 ]
+
+users = {"bob" : "123", "ann" :  "pass123", "mike" : "password123", "liz" : "pass123"}
+oddelovac = ("-" * 60)
+print(oddelovac)
+print("Welcome to the app. Please log in:")
+name = input("USERNAME:")
+password = input("PASSWORD:")
+if name in users and password == users[name]:
+    print("Welcome", name,"!")
+elif name in users and password != users[name]:
+    print("Your password is incorrect,please try it again.")
+else:
+    print("Sorry, you're not registered.")
+    exit()
+print(oddelovac)
+print("We have 3 texts to be analyzed.")
+select = int(input("Enter the number btw. 1 and 3 to select:"))
+choice = TEXTS[select -1]
+print(oddelovac)
+print(choice)
+choice = choice.split()
+words = len(choice)
+title = 0
+upper = 0
+lower = 0
+numeric = 0
+print("These are", words, "words in the selected text")
+print("These are", title, "titlecase words")
+print("These are", upper, "uppercase words")
+print("These are", lower, "lowercase words")
+print("These are", numeric, "numeric string")
